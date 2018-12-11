@@ -4,6 +4,7 @@ import (
     "encoding/json"
     "strconv"
     "log"
+    "port"
     "net/http"
     "github.com/gorilla/mux"
 	"math/rand"
@@ -29,7 +30,7 @@ func statusHandler(w http.ResponseWriter, r *http.Request) {
 func contactHandler(w http.ResponseWriter, r *http.Request){
 	log.Println("POST - /name")
 
-	data, _ := json.Marshal(Contact{Name:"DareDave", Email:"david.rodriguez@privalia.com"})
+	data, _ := json.Marshal(Contact{Name:"DareDave", Email:"ruben.capdevila@privalia.com"})
 	writeJsonResponse(w, http.StatusOK, data)
 }
 
