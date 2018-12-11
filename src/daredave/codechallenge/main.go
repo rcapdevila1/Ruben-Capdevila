@@ -16,10 +16,8 @@ func main() {
     router.HandleFunc("/health",statusHandler).Methods("GET")
     router.HandleFunc("/name",contactHandler).Methods("POST")
     router.HandleFunc("/move",moveHandler).Methods("POST")
-    PORT := os.Getenv("PORT")
-log.Fatal(http.ListenAndServe(":"+PORT, router))
-
-   // log.Fatal(http.ListenAndServe(":8000", router))
+    
+    log.Fatal(http.ListenAndServe(":8000", router))
 }
 
 func statusHandler(w http.ResponseWriter, r *http.Request) {
