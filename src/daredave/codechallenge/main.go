@@ -29,7 +29,7 @@ func statusHandler(w http.ResponseWriter, r *http.Request) {
 func contactHandler(w http.ResponseWriter, r *http.Request){
 	log.Println("POST - /name")
 
-	data, _ := json.Marshal(Contact{Name:"DareDave", Email:"ruben.capdevila@privalia.com"})
+	data, _ := json.Marshal(Contact{Name:"DareDave", Email:"ruben.capdevila@veepee.com"})
 	writeJsonResponse(w, http.StatusOK, data)
 }
 
